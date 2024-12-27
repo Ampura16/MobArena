@@ -1,0 +1,9 @@
+name: MobArena
+version: '${project.version}'
+main: top.blug.mobarena.mobarena.Main
+api-version: 1.21
+
+commands:
+  mobarena:
+    description: MobArena 插件主命令
+    aliases: [ma]

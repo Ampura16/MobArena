@@ -1,0 +1,41 @@
+config-load-holder: 不用管这行配置
+# 由于技术原因，如遇任何 reload 热重载出现问题的情况，请使用 PlugmanX 彻底重载插件...
+# 在编辑 arenas.yml 时，地图最小玩家要填写大于等于2的正整数，否则可能会有小问题...
+# 插件前缀
+plugin-prefix: "&6[MobArena]"
+# 队列物品设置
+queue-item-settings:
+  # 选择地图
+  select-map:
+    # 这里加入地图道具的名称暂时不能更改...
+    name: "&2选择地图"
+    gui-title: "&2选择地图"
+    material: DIAMOND
+    slot: 0
+    lore:
+      - "&a点击打开选择地图界面"
+      - "&eLeft-Click to open map selection"
+  # 选择职业
+  select-kit:
+    name: "&e选择职业"
+    material: GOLDEN_SWORD
+    slot: 1
+    lore:
+      - "&a点击打开选择职业GUI"
+      - "&eLeft-Click to open SelectKit GUI"
+  # 退出游戏
+  leave-game:
+    name: "&c退出游戏"
+    material: REDSTONE
+    slot: 7
+    lore:
+      - "&a点击退出当前游戏队列"
+      - "&eRight-Click to leave the game"
+  # 商店
+  shop:
+    name: "&a商店"
+    material: EMERALD
+    slot: 8
+    lore:
+      - "&a点击打开游戏商店"
+      - "&eRight-Click to open coin shop"
