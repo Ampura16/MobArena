@@ -1,0 +1,18 @@
+name: MobArena
+version: '${project.version}'
+description: MobArena 怪物竞技场
+author: Ampura16
+
+main: top.brmc.ampura16.mobarena.Main
+api-version: "1.20"
+depend:
+  - PlaceholderAPI
+  - Vault
+  - MythicMobs
+softdepend:
+  - LuckPerms
+
+commands:
+  mobarena:
+    description: MobArena 插件主命令
+    aliases: [ma]

@@ -1,0 +1,64 @@
+config-load-holder: 不用管这行配置
+# 由于技术原因，如遇任何 reload 热重载出现问题的情况，请使用 PlugmanX 彻底重载插件...
+# 插件前缀
+plugin-prefix: "&6[MobArena]"
+# 游戏开始倒计时 单位:秒
+start-countdown-time: 30
+# 队列物品设置
+queue-item-settings:
+  # 选择地图
+  select-map:
+    name: "&2选择地图"
+    # 这里选择地图GUI的标题暂时不能更改...
+    gui-title: "&2选择地图"
+    material: DIAMOND
+    slot: 0
+    lore:
+      - "&a点击打开选择地图界面"
+      - "&eLeft-Click to open map selection"
+  # 选择职业
+  select-kit:
+    name: "&e选择职业"
+    material: GOLDEN_SWORD
+    slot: 1
+    lore:
+      - "&a点击打开选择职业GUI"
+      - "&eLeft-Click to open SelectKit GUI"
+  # 退出游戏
+  leave-game:
+    name: "&c退出游戏"
+    material: REDSTONE
+    slot: 7
+    lore:
+      - "&a点击退出当前游戏队列"
+      - "&eRight-Click to leave the game"
+  # 商店
+  shop:
+    name: "&a商店"
+    material: EMERALD
+    slot: 8
+    lore:
+      - "&a点击打开游戏商店"
+      - "&eRight-Click to open coin shop"
+
+# 游戏阶段Bossbar信息设置
+bossbar-info:
+  title: "&a自定义Bossbar标题"
+  color: pink
+  style: solid
+  # 由于技术原因无法自动移除，所以源码层面改为读取此存续时间后强制移除
+  display-time: 3600
+# 游戏开始时的标题
+Title:
+  # 大标题
+  main-title: "&a&l游戏开始"
+  # 小标题
+  sub-title: "&e&lMobArena &b&l- &c&l怪物竞技场"
+# 附魔等级设置
+enchant-settings:
+  sharpness:
+    max-level: 10
+  protection:
+    max-level: 4
+# 初始血量
+base-health: 40.0

@@ -1,0 +1,47 @@
+config-load-holder: 不用管这行配置
+########################################
+# MobArena 职业配置文件
+########################################
+Warrior:
+  kit-display-name: "&c战士"
+  kit-material: "IRON_SWORD"
+  lore:
+    - "&c战士职业第一行描述"
+    - "&c战士职业第二行描述"
+  kit-shop: WarriorShop
+  kit-inventory:
+    - IRON_SWORD,1
+    - IRON_HELMET,1
+    - IRON_CHESTPLATE,1
+    - IRON_LEGGINGS,1
+    - IRON_BOOTS,1
+    - SHIELD,1
+
+Archer:
+  kit-display-name: "&b弓箭手"
+  kit-material: "BOW"
+  lore:
+    - "&b弓箭手职业第一行描述"
+    - "&b弓箭手职业第二行描述"
+  kit-shop: ArcherShop
+  kit-inventory:
+    - BOW,1
+    - LEATHER_HELMET,1
+    - LEATHER_CHESTPLATE,1
+    - LEATHER_LEGGINGS,1
+    - LEATHER_BOOTS,1
+    - ARROW,256
+
+Healer:
+  kit-display-name: "&d药师"
+  kit-material: "POTION"
+  lore:
+    - "&d药师职业第一行描述"
+    - "&d药师职业第二行描述"
+  kit-shop: HealerShop
+  kit-inventory:
+    - GOLDEN_SWORD,1
+    - GOLDEN_HELMET,1
+    - GOLDEN_CHESTPLATE,1
+    - GOLDEN_LEGGINGS,1
+    - GOLDEN_BOOTS,1

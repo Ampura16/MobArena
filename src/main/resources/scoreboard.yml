@@ -1,0 +1,42 @@
+config-load-holder: 不用管这行配置
+##################################################
+# MobArena 计分板配置文件
+# PAPI 变量列表
+# %mobarena_currentmap% 返回当前所在地图名称
+# %mobarena_currentplayers% 返回当前地图当前玩家数
+# %mobarena_maxplayers% 返回当前地图最大玩家数
+# %mobarena_currentmapstatus% 返回当前地图游戏状态
+# %mobarena_currentkit% 返回当前职业名称
+# %mobarena_currentmobleft% 返回当前回合剩余怪物数量
+# %mobarena_currentround%% 返回当前回合数
+##################################################
+
+#计分板总标题
+title: "&e&lMobArena &b&l- &c&l怪物竞技场"
+waiting:
+  board-list:
+    line-1: "&b-----------------------------------------"
+    line-2: "&a "
+    line-3: "&a当前地图: %mobarena_currentmap%"
+    line-4: "&e人数: %mobarena_currentplayers%/%mobarena_maxplayers%"
+    line-5: "&b "
+    line-6: "&e职业: %mobarena_currentkit%"
+    line-7: "&b当前状态: %mobarena_currentmapstatus%"
+    line-8: "&c "
+    line-9: "&b----------------------------------------"
+    line-10: "&3&lBlockLand &6&lStudio"
+
+ingame:
+  board-list:
+    line-1: "&b-----------------------------------------"
+    line-2: "&a "
+    line-3: "&a当前地图: %mobarena_currentmap%"
+    line-4: "&e人数: %mobarena_currentplayers%/%mobarena_maxplayers%"
+    line-5: "&b "
+    line-6: "&e职业: %mobarena_currentkit%"
+    line-7: "&b当前状态: %mobarena_currentmapstatus%"
+    line-8: "&a当前回合: %mobarena_currentround%"
+    line-9: "&2剩余怪物: %mobarena_currentmobleft%"
+    line-10: "&c "
+    line-11: "&b----------------------------------------"
+    line-12: "&3&lBlockLand &6&lStudio "

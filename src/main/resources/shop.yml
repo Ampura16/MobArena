@@ -1,0 +1,137 @@
+config-load-holder: 不用管这行配置
+##############################
+# MobArena 职业商店配置文件
+##############################
+
+# 战士职业商店
+Warrior:
+  items:
+    # 药水
+    - name: "&d治疗药水"
+      type: POTION
+      price: 50
+      amount: 1
+      attributes:
+        potionType: INSTANT_HEALTH
+        level: 2
+        duration: -1  # 持续时间（秒,如果是立刻生效则写-1）
+    # 附魔书
+    - name: "&d附魔书"
+      type: ENCHANTED_BOOK
+      price: 100
+      amount: 1
+      attributes:
+        enchantmentType: SHARPNESS
+        level: 1
+    - name: "&d附魔书"
+      type: ENCHANTED_BOOK
+      price: 120
+      amount: 1
+      attributes:
+        enchantmentType: PROTECTION
+        level: 1
+    # 食物
+    - name: "&e金苹果"
+      type: GOLDEN_APPLE
+      price: 120
+      amount: 1
+
+# 弓箭手职业商店
+Archer:
+  items:
+    # 箭
+    - name: "&r箭"
+      type: ARROW
+      price: 50
+      amount: 64
+    # 药水
+    - name: "&d治疗药水"
+      type: POTION
+      price: 50
+      amount: 1
+      attributes:
+        potionType: INSTANT_HEALTH
+        level: 2
+        duration: -1  # 持续时间（秒,如果是立刻生效则写-1）
+    - name: "&d生命恢复药水"
+      type: POTION
+      price: 40
+      amount: 1
+      attributes:
+        potionType: REGENERATION
+        level: 1
+        duration: 35  # 持续时间（秒）
+    # 附魔书
+    - name: "&d附魔书"
+      type: ENCHANTED_BOOK
+      price: 100
+      amount: 1
+      attributes:
+        enchantmentType: PROTECTION
+        level: 1
+    - name: "&d附魔书"
+      type: ENCHANTED_BOOK
+      price: 120
+      amount: 1
+      attributes:
+        enchantmentType: POWER
+        level: 1
+    - name: "&d附魔书"
+      type: ENCHANTED_BOOK
+      price: 150
+      amount: 1
+      attributes:
+        enchantmentType: FLAME
+        level: 1
+    - name: "&d附魔书"
+      type: ENCHANTED_BOOK
+      price: 180
+      amount: 1
+      attributes:
+        enchantmentType: PUNCH
+        level: 1
+
+# 药师职业商店
+Healer:
+  items:
+    # 药水
+    - name: "&d喷溅型治疗药水"
+      type: SPLASH_POTION
+      price: 40
+      amount: 1
+      attributes:
+        potionType: INSTANT_HEALTH
+        level: 1
+        duration: -1  # 持续时间（秒）
+    - name: "&d喷溅型治疗药水"
+      type: SPLASH_POTION
+      price: 60
+      amount: 1
+      attributes:
+        potionType: INSTANT_HEALTH
+        level: 2
+        duration: -1  # 持续时间（秒）
+    - name: "&d喷溅型再生药水"
+      type: SPLASH_POTION
+      price: 35
+      amount: 1
+      attributes:
+        potionType: REGENERATION
+        level: 1
+        duration: 23  # 持续时间（秒）
+    - name: "&d喷溅型伤害药水"
+      type: SPLASH_POTION
+      price: 35
+      amount: 1
+      attributes:
+        potionType: INSTANT_DAMAGE
+        level: 1
+        duration: -1  # 持续时间（秒）
+    # 附魔书
+    - name: "&d附魔书"
+      type: ENCHANTED_BOOK
+      price: 120
+      amount: 1
+      attributes:
+        enchantmentType: PROTECTION
+        level: 1

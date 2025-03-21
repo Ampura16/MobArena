@@ -1,0 +1,25 @@
+TheOldOne:
+  name: "&9&l深海战斗哨兵单位 DSU-1"
+  type: ZOMBIE
+  health: 200.0
+  # 设置是否是Boss，config.yml中enable-show-boss-display-name项设置将决定是否显示名称
+  isBoss: true
+  # 如果怪物是僵尸则允许设置是否为Baby
+  isBaby: true
+  equipments:
+    hand: DIAMOND_SWORD
+    head:
+      item: PLAYER_HEAD
+      skin: "Ampura16"  # 这里填入玩家头颅皮肤的值
+      # 装备自定义玩家头颅则写入皮肤值
+    chestplate:
+      item: LEATHER_CHESTPLATE
+      color: "8470FF"  # 使用十六进制表示的颜色值
+    leggings:
+      item: LEATHER_LEGGINGS
+      color: "8470FF"  # 使用十六进制表示的颜色值
+    boots:
+      item: DIAMOND_BOOTS
+      # 不是皮革装备则不需要写color
+  moveSpeed: 0.26
+  killCoin: 10.0

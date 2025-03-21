@@ -1,0 +1,16 @@
+NormalSkeleton:
+  name: "&r普通骷髅"
+  type: SKELETON
+  health: 20.0
+  isBoss: false
+  isBaby: false
+  equipments:
+    hand: BOW
+    head:
+      item: LEATHER_HELMET
+      skin: null  # 如果没有皮肤值，可以设置为 null
+    chestplate: null
+    leggings: null
+    boots: null
+  moveSpeed: 0.2
+  killCoin: 10.0
