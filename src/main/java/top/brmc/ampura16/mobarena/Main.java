@@ -30,7 +30,7 @@ import java.util.List;
  * 插件主类
  */
 public final class Main extends JavaPlugin {
-
+    
     private Main plugin;
     private String pluginPrefix;
     private FoldersConfig foldersConfig;
