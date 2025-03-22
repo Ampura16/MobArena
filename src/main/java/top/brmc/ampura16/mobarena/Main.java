@@ -41,7 +41,7 @@ public final class Main extends JavaPlugin {
     private MapManager mapManager;
     private PlayerGameStatus playerGameStatus;
     private MAQueueUtils queueUtils;
-    private HashMap<String, MobConfig> mobsConfigurations = new HashMap<>(); // 存储怪物配置
+    private final HashMap<String, MobConfig> mobsConfigurations = new HashMap<>(); // 存储怪物配置
     private NamespacedKey kitItemKey;
     private KitManager kitManager;
     private KitSelectGUI kitSelectGUI;
@@ -49,7 +49,6 @@ public final class Main extends JavaPlugin {
     private FileConfiguration scoreboardConfig; // scoreboard.yml 的配置
     private MAArenaRoundTask roundTask; // 回合任务
     private FileConfiguration shopConfig; // shop.yml 的配置
-    private MAArenaStartEventListener arenaStartListener;
 
     /**
      * 插件启动时调用的方法。
@@ -196,7 +195,7 @@ public final class Main extends JavaPlugin {
         MAArenaLeaveEventListener leaveEventListener = new MAArenaLeaveEventListener(this);
         getServer().getPluginManager().registerEvents(leaveEventListener, this);
         // 实例化 arenaStartListener
-        arenaStartListener = new MAArenaStartEventListener(this, arenasConfig, getConfig(), maScoreboard);
+        MAArenaStartEventListener arenaStartListener = new MAArenaStartEventListener(this, arenasConfig, getConfig(), maScoreboard);
         getServer().getPluginManager().registerEvents(arenaStartListener, this); // 注册 MAAArenaStartListener
         getServer().getPluginManager().registerEvents(new MAArenaRoundUpdateEventListener(this, arenasConfig), this);
         getServer().getPluginManager().registerEvents(new MAArenaMobDeathListener(roundTask, mapManager, maScoreboard), this);
