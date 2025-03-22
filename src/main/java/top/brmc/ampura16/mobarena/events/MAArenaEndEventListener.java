@@ -33,4 +33,8 @@ public class MAArenaEndEventListener implements Listener {
         // 日志输出到控制台
         plugin.getLogger().info(localListenerName + " 游戏已结束,竞技场 " + arena.getDisplayName() + " 已重置.");
     }
+
+    public FileConfiguration getArenasConfig() {
+        return arenasConfig;
+    }
 }
