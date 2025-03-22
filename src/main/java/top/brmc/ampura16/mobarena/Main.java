@@ -291,9 +291,9 @@ public final class Main extends JavaPlugin {
         Location newWaitingLocation = Arena.getLocationFromConfig(config, mapName, "waitingLocation");
         if (newWaitingLocation != null) {
             arena.setWaitingLocation(newWaitingLocation);
-            getLogger().info("已更新竞技场 " + mapName + " 的等待位置。");
+            getLogger().info("已更新竞技场 " + mapName + " 的等待位置.");
         } else {
-            getLogger().warning("未找到竞技场 " + mapName + " 的等待位置配置。");
+            getLogger().warning("未找到竞技场 " + mapName + " 的等待位置配置.");
         }
     }
 
