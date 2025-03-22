@@ -161,16 +161,15 @@ public class MACommand implements CommandExecutor, Listener {
      * @param player 玩家对象
      */
     private void printPlayerHelpMessages(Player player) {
-        player.sendMessage(ChatColor.AQUA + "==========[ MobArena - 指令帮助 ]==========");
-        player.sendMessage(ChatColor.GOLD + "/ma help - 查看指令帮助");
-        player.sendMessage(ChatColor.GOLD + "/ma gui - 打开选择地图GUI");
-        player.sendMessage(ChatColor.GOLD + "/ma create <地图名称> <显示名称> <最小玩家数> <最大玩家数> [材质(可选)] [描述信息(可选)] - 创建地图");
-        player.sendMessage(ChatColor.GOLD + "/ma remove <地图名称> - 删除一个现有地图");
-        player.sendMessage(ChatColor.GOLD + "/ma maplist - 展示可用地图列表");
-        player.sendMessage(ChatColor.RED + "/ma admin - 管理员指令");
-        player.sendMessage(ChatColor.GOLD + "/ma reload - 重载插件配置");
-        player.sendMessage(ChatColor.RED + "⊙ 注意: reload 命令不太好使,如遇问题请使用 PlugmanX 彻底重启本插件!");
-        player.sendMessage(ChatColor.AQUA + "==================================================");
+        player.sendMessage(ChatColor.AQUA + "Usage: /ma");
+        player.sendMessage(ChatColor.GRAY + "        ├── " + ChatColor.GOLD + "help" + ChatColor.GRAY + " - 查看指令帮助");
+        player.sendMessage(ChatColor.GRAY + "        ├── " + ChatColor.GOLD + "gui" + ChatColor.GRAY + " - 打开选择地图GUI");
+        player.sendMessage(ChatColor.GRAY + "        ├── " + ChatColor.GOLD + "create <地图名称> <显示名称> <最小玩家数> <最大玩家数> [材质(可选)] [描述信息(可选)]" + ChatColor.GRAY + " - 创建地图");
+        player.sendMessage(ChatColor.GRAY + "        ├── " + ChatColor.GOLD + "remove <地图名称>" + ChatColor.GRAY + " - 删除一个现有地图");
+        player.sendMessage(ChatColor.GRAY + "        ├── " + ChatColor.GOLD + "maplist" + ChatColor.GRAY + " - 展示可用地图列表");
+        player.sendMessage(ChatColor.GRAY + "        ├── " + ChatColor.RED + "admin" + ChatColor.GRAY + " - 管理员指令");
+        player.sendMessage(ChatColor.GRAY + "        └── " + ChatColor.GOLD + "reload" + ChatColor.GRAY + " - 重载插件配置");
+        player.sendMessage(ChatColor.RED + "⊙ 注意: " + ChatColor.GRAY + "reload 命令不太好使,如遇问题请使用 PlugmanX 彻底重启本插件!");
     }
 
     /**

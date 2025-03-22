@@ -131,11 +131,11 @@ public class AdminSubCommand {
      * @param admin 管理员玩家对象
      */
     private void printAdminHelpMessages(Player admin) {
-        admin.sendMessage(ChatColor.AQUA + "==========[ MobArena - 管理员指令帮助 ]==========");
-        admin.sendMessage(ChatColor.GOLD + "/ma admin setwaitloc <地图名称> - 设置等待大厅位置");
-        admin.sendMessage(ChatColor.GOLD + "/ma admin setstartloc <地图名称> - 设置起始位置");
-        admin.sendMessage(ChatColor.GOLD + "/ma admin setmobspawnloc <地图名称> - 新增地图刷怪点");
-        admin.sendMessage(ChatColor.RED + "⊙ 注意: 暂时因为技术原因,创建地图后要及时设置等待位置并且重启服务器,才能正确识别...");
-        admin.sendMessage(ChatColor.AQUA + "==================================================");
+        admin.sendMessage(ChatColor.AQUA + "Usage: /ma admin");
+        admin.sendMessage(ChatColor.GRAY + "        ├── " + ChatColor.GOLD + "setwaitloc <地图名称>" + ChatColor.GRAY + " - 设置等待大厅位置");
+        admin.sendMessage(ChatColor.GRAY + "        ├── " + ChatColor.GOLD + "setstartloc <地图名称>" + ChatColor.GRAY + " - 设置起始位置");
+        admin.sendMessage(ChatColor.GRAY + "        └── " + ChatColor.GOLD + "setmobspawnloc <地图名称>" + ChatColor.GRAY + " - 新增地图刷怪点");
+        admin.sendMessage(ChatColor.RED + "⊙ 注意: " + ChatColor.GRAY + "暂时因为技术原因,创建地图后要及时设置等待位置并且重启服务器,才能正确识别...");
     }
+
 }
