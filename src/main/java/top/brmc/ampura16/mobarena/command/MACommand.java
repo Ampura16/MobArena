@@ -168,7 +168,7 @@ public class MACommand implements CommandExecutor, Listener {
         player.sendMessage(ChatColor.GRAY + "        ├── " + ChatColor.GOLD + "remove <地图名称>" + ChatColor.GRAY + " - 删除一个现有地图");
         player.sendMessage(ChatColor.GRAY + "        ├── " + ChatColor.GOLD + "maplist" + ChatColor.GRAY + " - 展示可用地图列表");
         player.sendMessage(ChatColor.GRAY + "        ├── " + ChatColor.RED + "admin" + ChatColor.GRAY + " - 管理员指令");
-        player.sendMessage(ChatColor.GRAY + "        └── " + ChatColor.GOLD + "reload" + ChatColor.GRAY + " - 重载插件配置");
+        player.sendMessage(ChatColor.GRAY + "        └── " + ChatColor.RED + "reload" + ChatColor.GRAY + " - 重载插件配置");
         player.sendMessage(ChatColor.RED + "⊙ 注意: " + ChatColor.GRAY + "reload 命令不太好使,如遇问题请使用 PlugmanX 彻底重启本插件!");
     }
 
