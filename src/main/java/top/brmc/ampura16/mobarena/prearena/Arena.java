@@ -15,6 +15,8 @@ import top.brmc.ampura16.mobarena.scoreboard.MAScoreboard;
 import java.util.*;
 import java.util.logging.Logger;
 
+import static org.bukkit.Bukkit.getLogger;
+
 public class Arena {
     private final Main plugin;
     private final Map<Integer, Map<String, Integer>> roundMobCounts; // 存储每个回合的怪物数量
@@ -33,7 +35,7 @@ public class Arena {
     private int currentRound; // 当前回合标识
     private Map<String, Integer> currentRoundMobCounts; // 当前回合的怪物数量
     private int remainingMobCount = 0; // 当前回合剩余的怪物数量
-    private static final Logger logger = Bukkit.getLogger();
+    private static final Logger logger = getLogger();
     private MAScoreboard maScoreboard;
 
     public Arena(Main plugin,
@@ -82,7 +84,7 @@ public class Arena {
         }
         World world = Bukkit.getWorld(worldName);
         if (world == null) {
-            Bukkit.getLogger().warning("未找到世界: " + worldName);
+            getLogger().warning("未找到世界: " + worldName);
             return null;
         }
         double x = config.getDouble(mapName + "." + locationKey + ".x");
@@ -109,11 +111,11 @@ public class Arena {
                         roundMobCounts.put(round, mobCounts);
                     }
                 } catch (NumberFormatException e) {
-                    Bukkit.getLogger().warning("无效的回合键: " + roundKey + "，回合键必须是整数。");
+                    getLogger().warning("无效的回合键: " + roundKey + "，回合键必须是整数。");
                 }
             }
         } else {
-            Bukkit.getLogger().warning("未找到 " + mapName + " 的 gamerounds 配置。");
+            getLogger().warning("未找到 " + mapName + " 的 gamerounds 配置。");
         }
         return roundMobCounts;
     }
@@ -123,7 +125,7 @@ public class Arena {
     }
 
     public void setCurrentRound(int currentRound) {
-        Bukkit.getLogger().info("更新回合数为: " + currentRound);
+        getLogger().info("更新回合数为: " + currentRound);
         this.currentRound = currentRound; // 直接设置 currentRound 的值
     }
 
@@ -207,6 +209,25 @@ public class Arena {
 
     public String getName() {
         return mapName;
+    }
+
+    /**
+     * 更新指定竞技场的等待位置.
+     *
+     * @param arena 竞技场实例
+     * @param config 配置文件
+     */
+    public static void updateArenaWaitingLocation(Arena arena, FileConfiguration config) {
+        String mapName = arena.getName();
+
+        // 更新等待位置
+        Location newWaitingLocation = Arena.getLocationFromConfig(config, mapName, "waitingLocation");
+        if (newWaitingLocation != null) {
+            arena.setWaitingLocation(newWaitingLocation);
+            getLogger().info("已更新竞技场 " + mapName + " 的等待位置.");
+        } else {
+            getLogger().warning("未找到竞技场 " + mapName + " 的等待位置配置.");
+        }
     }
 
     public void setWaitingLocation(Location waitingLocation) {

@@ -30,15 +30,15 @@ import java.util.List;
  * 插件主类
  */
 public final class Main extends JavaPlugin {
-    
+
     private Main plugin;
     private String pluginPrefix;
     private FoldersConfig foldersConfig;
     private FileConfiguration arenasConfig;
     private FileConfiguration kitsConfig; // kits.yml 的配置
     private List<Arena> arenaList; // 存储所有地图的列表
-    // 存储玩家与地图的对应关系
-    private MapManager mapManager;
+    private Arena arena;
+    private MapManager mapManager; // 存储玩家与地图的对应关系
     private PlayerGameStatus playerGameStatus;
     private MAQueueUtils queueUtils;
     private final HashMap<String, MobConfig> mobsConfigurations = new HashMap<>(); // 存储怪物配置
@@ -268,32 +268,11 @@ public final class Main extends JavaPlugin {
         arenasConfig = foldersConfig.createArenasConfig();
         arenaList = Arena.loadArenasFromConfig(plugin, arenasConfig, pluginPrefix, maScoreboard); // 重新加载地图
         // 动态更新所有 Arena 的等待位置和开始位置
-        for (Arena arena : arenaList) {
-            updateArenaWaitingLocation(arena, arenasConfig);
-        }
+        for (Arena arena : arenaList) Arena.updateArenaWaitingLocation(arena, arenasConfig);
         shopConfig = foldersConfig.createShopConfig(); // 重新加载 shop.yml
         loadMobsConfigurations(); // 重载怪物配置
         kitsConfig = foldersConfig.createKitsConfig(); // 重新加载职业配置
         scoreboardConfig = foldersConfig.createScoreboardConfig(); // 重新加载 scoreboard.yml
-    }
-
-    /**
-     * 更新指定竞技场的等待位置.
-     *
-     * @param arena 竞技场实例
-     * @param config 配置文件
-     */
-    private void updateArenaWaitingLocation(Arena arena, FileConfiguration config) {
-        String mapName = arena.getName();
-
-        // 更新等待位置
-        Location newWaitingLocation = Arena.getLocationFromConfig(config, mapName, "waitingLocation");
-        if (newWaitingLocation != null) {
-            arena.setWaitingLocation(newWaitingLocation);
-            getLogger().info("已更新竞技场 " + mapName + " 的等待位置.");
-        } else {
-            getLogger().warning("未找到竞技场 " + mapName + " 的等待位置配置.");
-        }
     }
 
     /**
